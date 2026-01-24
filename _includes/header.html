@@ -1,0 +1,28 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ "/" | relative_url }}">
+      {{ site.title }}
+    </a>
+
+    <nav class="site-nav">
+      <div class="trigger">
+
+        <a class="page-link" href="{{ "/" | relative_url }}">Introduction</a>
+        <a class="page-link" href="{{ "/data-prep-eda/" | relative_url }}">Data Prep & EDA</a>
+
+        <div class="dropdown">
+          <span class="page-link dropdown-title">Models ▾</span>
+          <div class="dropdown-content">
+            <a href="{{ "/model1/" | relative_url }}">Model 1</a>
+            <a href="{{ "/model2/" | relative_url }}">Model 2</a>
+          </div>
+        </div>
+
+        <a class="page-link" href="{{ "/conclusions/" | relative_url }}">Conclusions</a>
+
+      </div>
+    </nav>
+
+  </div>
+</header>
