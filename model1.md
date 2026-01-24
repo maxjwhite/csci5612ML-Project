@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MODEL 1: "INSERT MODEL NAME HERE"
+title: MODEL 1 "INSERT MODEL NAME HERE"
 permalink: /model1/
 ---
 
