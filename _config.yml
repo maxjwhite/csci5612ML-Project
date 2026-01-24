@@ -1,10 +1,4 @@
 title: CSCI 5612 – Machine Learning Project
 description: Final project website
-theme: minima   # safe default, officially supported
+theme: minima   
 markdown: kramdown
-header_pages:
-- index.md
-- data-prep-eda.md
-- mdoel1.md
-- model2.md
-- conclusion.md
