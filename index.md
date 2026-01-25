@@ -5,14 +5,9 @@ permalink: /
 ---
 ![Wide-angle view of a professional basketball game](https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80)
 
-
-<div class="justified-intro">
-
 The National Basketball Association (NBA) is one of the most popular and closely followed professional sports leagues in the world, attracting fans, analysts, media organizations, and team decision-makers alike. Beyond entertainment, the NBA has become a space where data plays an increasingly important role in shaping how the game is understood and discussed. Every season, thousands of games generate detailed records of player performance, team outcomes, and league-wide trends. These data help frame conversations about success, improvement, and competitive balance across the league. For fans, data-driven insights provide deeper context for what happens on the court. For teams and players, performance statistics can influence evaluations, contracts, and career trajectories. As analytics becomes more visible in sports coverage, it is important to understand what stories the data can meaningfully tell. Basketball’s structured gameplay and consistent rules make it especially well-suited for systematic analysis. Examining NBA data allows us to explore broader questions about performance and consistency in a familiar setting. This project focuses on analyzing NBA data to better understand patterns that emerge across players, teams, and seasons.
 
 The data used in this project is gathered from publicly available NBA statistics accessed through the [`nba_api`](https://github.com/swar/nba_api), a community-supported interface that provides structured access to official league data. This source aggregates historical and current information that is commonly referenced in media coverage and public discussions of the NBA. Using an open and reproducible data source ensures transparency in how insights are derived and allows findings to be easily revisited or extended. Over the past decade, analysts and researchers have used similar data to study topics such as scoring trends, efficiency, and the impact of individual players. While professional teams often rely on proprietary tools, public NBA data offers a valuable opportunity for independent exploration. However, raw statistics do not always tell a complete story without thoughtful interpretation. Context, comparison, and variation across seasons all influence how numbers should be understood. By examining NBA data from multiple perspectives, this project aims to clarify how performance patterns develop over time. The goal is not to predict outcomes, but to better interpret what the available data reveals. Ultimately, this analysis seeks to make NBA data more accessible and informative for a general audience.
-
-</div>
 
 
 ---
