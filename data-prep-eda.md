@@ -16,8 +16,7 @@ Data was collected by querying specific endpoints within the `nba_api` that retu
 
 This project relies exclusively on data accessed through the `nba_api`, which serves as a wrapper around official NBA statistics endpoints. The API documentation and source code are available at the following link:
 
-- ***nba_api GitHub Repository:***  
-  https://github.com/swar/nba_api
+- ***nba_api GitHub Repository:*** https://github.com/swar/nba_api
 
 One core endpoint used for data collection is the **Player Career Statistics** endpoint, which provides season-by-season performance summaries for individual players. This endpoint returns data such as points per game, rebounds, assists, and games played across a player’s career.
 
