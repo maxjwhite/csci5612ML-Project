@@ -37,17 +37,19 @@ player_stats.get_data_frames()[0]
 Most of the data prep and cleaning work was already done before the requests were made. This is thanks to the high quality of the data itself and the efforts of those who work on the 'nba_api' python package which made requesting and reformatting the request objects fairly straightforward. Once the JSON objects were requested, it was just a matter of iterating through the reponse objects and storing them as a dataframe. The data uses full team names in the response object and for the sake of readability, an abbreviated team name feature was created. 
 </p>
 
-  <div style="text-align: center; width: 500px;">
+<div style="display: flex; justify-content: center; gap: 40px; margin: 30px 0;">
+
+  <div style="text-align: center;">
     <p><strong>Before</strong></p>
-    <img src="/image/before.png" alt="Before" width="500">
+    <img src="/image/before.png" alt="Before" style="width: 400px; height: auto;">
   </div>
 
-  <div style="text-align: center; width: 500px;">
+  <div style="text-align: center;">
     <p><strong>After</strong></p>
-    <div style="display: flex; justify-content: center; gap: 10px;">
-      <img src="/image/after2.png" alt="After 1" width="500">
-    </div>
+    <img src="/image/after2.png" alt="After" style="width: 400px; height: auto;">
   </div>
+
+</div>
 
 <p style="text-align: justify;">
 The code below shows step by step how the data was requested and reformatted for EDA and visualization. This preliminary exploration focused on endpoints relating to individual player stats and team stats, but there are many other endpoints to explore that would follow a similar pipeline. 
