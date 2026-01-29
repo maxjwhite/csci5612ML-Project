@@ -41,7 +41,7 @@ Most of the data prep and cleaning work was already done before the requests wer
 
   <div style="text-align: center;">
     <p><strong>Before</strong></p>
-    <img src="/csci5612ML-Project/image/before.png" alt="Before" style="width: 400px; height: auto;">
+    <img src="/csci5612ML-Project/image/before_nba.png" alt="Before" style="width: 400px; height: auto;">
   </div>
 
   <div style="text-align: center;">
