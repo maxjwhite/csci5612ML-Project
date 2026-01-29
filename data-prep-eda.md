@@ -40,6 +40,11 @@ Most of the data prep and cleaning work was already done before the requests wer
 * insert before snapshot here with caption
 * insert after screenshot here with caption
 
+<p style="text-align: justify;">
+The code below shows step by step how the data was requested and reformatted for EDA and visualization. This preliminary exploration focused on endpoints relating to individual player stats and team stats, but there are many other endpoints to explore that would follow a similar pipeline. 
+</p>
+
+
 {% highlight python %}
 # !pip install nba_api
 import pandas as pd
