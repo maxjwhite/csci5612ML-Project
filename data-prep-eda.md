@@ -6,7 +6,7 @@ permalink: /data-prep-eda/
 
 ## Data Collection
 <p style="text-align: justify;">
-The data used in this project was gathered using the publicly available NBA statistics provided through the [`nba_api`](https://github.com/swar/nba_api), a Python-based interface that allows access to official NBA data endpoints. This API provides structured access to historical and current information on players, teams, games, and season-level statistics. Using an API rather than static datasets allows for reproducibility and flexibility, making it possible to update or extend the analysis as new seasons or data become available. The NBA is particularly well-suited for this type of data-driven exploration due to the consistency of its rules, schedules, and statistical tracking across seasons.
+The data used in this project was gathered using the publicly available NBA statistics provided through the <a href="https://github.com/swar/nba_api" target="_blank">nba_api</a>, a Python-based interface that allows access to official NBA data endpoints. This API provides structured access to historical and current information on players, teams, games, and season-level statistics. Using an API rather than static datasets allows for reproducibility and flexibility, making it possible to update or extend the analysis as new seasons or data become available. The NBA is particularly well-suited for this type of data-driven exploration due to the consistency of its rules, schedules, and statistical tracking across seasons.
 </p>
 
 <p style="text-align: justify;">
@@ -19,7 +19,7 @@ Data was collected by querying specific endpoints within the `nba_api` that retu
 
 This project relies exclusively on data accessed through the `nba_api`, which serves as a wrapper around official NBA statistics endpoints. The API documentation and source code are available at the following link:
 
-- ***nba_api GitHub Repository:*** https://github.com/swar/nba_api
+- [***nba_api GitHub Repository:***](https://github.com/swar/nba_api)
 
 One core endpoint used for data collection is the **Player Career Statistics** endpoint, which provides season-by-season performance summaries for individual players. This endpoint returns data such as points per game, rebounds, assists, and games played across a player’s career.
 
