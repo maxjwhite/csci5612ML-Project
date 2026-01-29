@@ -22,7 +22,6 @@ One core endpoint used for data collection is the **Player Career Statistics** e
 
 **Example API usage (Python):**
 
-```liquid
 {% highlight python %}
 from nba_api.stats.endpoints import playercareerstats
 
