@@ -1,4 +1,22 @@
-title: CSCI 5612 – Machine Learning Project
-description: Final project website
-theme: minima   
+title: CSCI 5612 – NBA Analytics
+description: >
+  Final machine learning project for CSCI 5612 exploring patterns and trends
+  in NBA data using publicly available statistics.
+
+theme: minima
 markdown: kramdown
+
+author:
+  name: Maxwell White
+  github: maxjwhite
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+url: "https://maxjwhite.github.io"
+baseurl: "/csci5612ML-Project"
+
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/maxjwhite/csci5612ML-Project" }
