@@ -5,10 +5,13 @@ permalink: /data-prep-eda/
 ---
 
 ## Data Collection
-
+<p style="text-align: justify;">
 The data used in this project was gathered using the publicly available NBA statistics provided through the [`nba_api`](https://github.com/swar/nba_api), a Python-based interface that allows access to official NBA data endpoints. This API provides structured access to historical and current information on players, teams, games, and season-level statistics. Using an API rather than static datasets allows for reproducibility and flexibility, making it possible to update or extend the analysis as new seasons or data become available. The NBA is particularly well-suited for this type of data-driven exploration due to the consistency of its rules, schedules, and statistical tracking across seasons.
+</p>
 
+<p style="text-align: justify;">
 Data was collected by querying specific endpoints within the `nba_api` that return structured JSON responses. These responses were then converted into tabular formats for analysis. The focus of data collection was on season-level and player-level statistics that are commonly referenced in public basketball discussions, such as scoring, efficiency metrics, and games played. The goal was not to capture every available statistic, but rather to gather a representative sample of data that reflects overall performance trends across players and teams. All data used in this project originates from publicly accessible NBA records and does not rely on proprietary or restricted sources.
+</p>
 
 ---
 
