@@ -41,12 +41,12 @@ Most of the data prep and cleaning work was already done before the requests wer
 
   <div style="text-align: center;">
     <p><strong>Before</strong></p>
-    <img src="/image/before.png" alt="Before" style="width: 400px; height: auto;">
+    <img src="/image/before_nba.png" alt="Before" style="width: 400px; height: auto;">
   </div>
 
   <div style="text-align: center;">
     <p><strong>After</strong></p>
-    <img src="/image/after2.png" alt="After" style="width: 400px; height: auto;">
+    <img src="/image/after2_nba.png" alt="After" style="width: 400px; height: auto;">
   </div>
 
 </div>
