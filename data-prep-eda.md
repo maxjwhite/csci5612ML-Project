@@ -41,15 +41,16 @@ Most of the data prep and cleaning work was already done before the requests wer
 
   <div style="text-align: center;">
     <p><strong>Before</strong></p>
-    <img src="/csci5612ML-Project/image/before_nba.png" alt="Before" style="width: 400px; height: auto;">
+    <img src="/csci5612ML-Project/image/before_nba.png" alt="Before" style="width: 400px; height: 300px; object-fit: cover;">
   </div>
 
   <div style="text-align: center;">
     <p><strong>After</strong></p>
-    <img src="/csci5612ML-Project/image/after2_nba.png" alt="After" style="width: 400px; height: auto;">
+    <img src="/csci5612ML-Project/image/after2_nba.png" alt="After" style="width: 400px; height: 300px; object-fit: cover;">
   </div>
 
 </div>
+
 
 <p style="text-align: justify;">
 The code below shows step by step how the data was requested and reformatted for EDA and visualization. This preliminary exploration focused on endpoints relating to individual player stats and team stats, but there are many other endpoints to explore that would follow a similar pipeline. 
