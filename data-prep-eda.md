@@ -32,3 +32,139 @@ player_stats = playercareerstats.PlayerCareerStats(player_id=2544)
 player_stats.get_data_frames()[0]
 {% endhighlight %}
 
+## Data Prep and Cleaning
+<p style="text-align: justify;">
+Most of the data prep and cleaning work was already done before the requests were made. This is thanks to the high quality of the data itself and the efforts of those who work on the 'nba_api' python package which made requesting and reformatting the request objects fairly straightforward. Once the JSON objects were requested, it was just a matter of iterating through the reponse objects and storing them as a dataframe. The data uses full team names in the response object and for the sake of readability, an abbreviated team name feature was created. 
+</p>
+
+* insert before snapshot here with caption
+* insert after screenshot here with caption
+
+{% highlight python %}
+# !pip install nba_api
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from nba_api.stats.static import teams
+from nba_api.stats.endpoints import leaguedashteamstats
+import warnings
+warnings.filterwarnings('ignore')
+
+plt.style.use('seaborn-v0_8')
+sns.set_palette("husl")
+
+# Function to get and save team data to CSV
+def get_and_save_team_data():
+    try:
+        team_stats = leaguedashteamstats.LeagueDashTeamStats(
+            season='2024-25', 
+            season_type_all_star='Regular Season',
+            per_mode_detailed='PerGame'
+        )
+        
+        df = team_stats.get_data_frames()[0]
+        
+        df.to_csv('nba_team_data.csv', index=False)
+        print("Data saved to 'nba_team_data.csv'")
+        
+        return df
+        
+    except Exception as e:
+        print(f"Error fetching data: {e}")
+        return None
+  {% endhighlight %}
+{% highlight python %}
+import os
+if not os.path.exists('nba_team_data.csv'):
+    print("Fetching data from API...")
+    team_data = get_and_save_team_data()
+    if team_data is None:
+        print("Failed to retrieve data. Exiting.")
+        exit()
+else:
+    print("Loading data from CSV...")
+    team_data = pd.read_csv('nba_team_data.csv')
+    print("Data loaded successfully")
+
+print("\nAvailable columns:")
+print(team_data.columns.tolist())
+print("\nFirst few rows of data:")
+print(team_data.head())
+
+clean_data = []
+
+column_mapping = {
+    'TEAM_NAME': 'TEAM_NAME',
+    'GP': 'GP',
+    'W': 'W',
+    'L': 'L',
+    'W_PCT': 'W_PCT', 
+    'PTS': 'PTS',
+    'REB': 'REB',
+    'AST': 'AST',
+    'FG_PCT': 'FG_PCT',
+    'FT_PCT': 'FT_PCT',
+    'OPP_PTS': 'OPP_PTS'
+}
+
+# Create abbreviation 
+team_abbreviations = {
+    'Atlanta Hawks': 'ATL',
+    'Boston Celtics': 'BOS',
+    'Brooklyn Nets': 'BKN',
+    'Charlotte Hornets': 'CHO',
+    'Chicago Bulls': 'CHI',
+    'Cleveland Cavaliers': 'CLE',
+    'Dallas Mavericks': 'DAL',
+    'Denver Nuggets': 'DEN',
+    'Detroit Pistons': 'DET',
+    'Golden State Warriors': 'GSW',
+    'Houston Rockets': 'HOU',
+    'Indiana Pacers': 'IND',
+    'Los Angeles Clippers': 'LAC',
+    'Los Angeles Lakers': 'LAL',
+    'Memphis Grizzlies': 'MEM',
+    'Miami Heat': 'MIA',
+    'Milwaukee Bucks': 'MIL',
+    'Minnesota Timberwolves': 'MIN',
+    'New Orleans Pelicans': 'NOP',
+    'New York Knicks': 'NYK',
+    'Oklahoma City Thunder': 'OKC',
+    'Orlando Magic': 'ORL',
+    'Philadelphia 76ers': 'PHI',
+    'Phoenix Suns': 'PHX',
+    'Portland Trail Blazers': 'POR',
+    'Sacramento Kings': 'SAC',
+    'San Antonio Spurs': 'SAS',
+    'Toronto Raptors': 'TOR',
+    'Utah Jazz': 'UTA',
+    'Washington Wizards': 'WAS'
+}
+
+for _, row in team_data.iterrows():
+    team_name = row.get('TEAM_NAME', 'Unknown')
+    abbrev = team_abbreviations.get(team_name, team_name)
+    clean_row = {
+        'TEAM_NAME': team_name,
+        'TEAM_ABBREV': abbrev,
+        'GP': row.get('GP', 0),
+        'W': row.get('W', 0),
+        'L': row.get('L', 0),
+        'W_PCT': row.get('W_PCT', 0),  
+        'PTS': row.get('PTS', 0),
+        'REB': row.get('REB', 0),
+        'AST': row.get('AST', 0),
+        'FG_PCT': row.get('FG_PCT', 0),
+        'FT_PCT': row.get('FT_PCT', 0),
+        'OPP_PTS': row.get('OPP_PTS', 0)
+    }
+    clean_data.append(clean_row)
+
+clean_df = pd.DataFrame(clean_data)
+
+clean_df['W_PCT'] = pd.to_numeric(clean_df['W_PCT'], errors='coerce')
+{% endhighlight %}
+
+
+
