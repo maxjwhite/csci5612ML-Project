@@ -37,62 +37,62 @@ Below are some visuals that were created to get an idea of what the team stats e
 <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/wins_nba.png" alt="Wins by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/wins_nba.png" alt="Wins by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The graph above shows win counts by each team in the 2024-2025 NBA season.</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/losses_nba.png" alt="Losses by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/losses_nba.png" alt="Losses by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The graph above shows loss counts by each team in the 2024-2025 NBA season.</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/winpct_nba.png" alt="Win % by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/winpct_nba.png" alt="Win % by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The graph above shows win percentage by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/points_nba.png" alt="Points per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/points_nba.png" alt="Points per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The graph above shows points per game by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/reb_nba.png" alt="Rebounds per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/reb_nba.png" alt="Rebounds per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The graph above shows rebounds per game by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/assists_nba.png" alt="Assists per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/assists_nba.png" alt="Assists per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The graph above shows Assists per game by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/pointsxwinpct_nba.png" alt="Points vs Win % per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/pointsxwinpct_nba.png" alt="Points vs Win % per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between points per game and win % by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/rebxwinpct_nba.png" alt="Rebounds vs Win % per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/rebxwinpct_nba.png" alt="Rebounds vs Win % per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between rebounds per game and win % by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/assistsxwinpct_nba.png" alt="Assists vs Win % per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/assistsxwinpct_nba.png" alt="Assists vs Win % per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between assists per game and win % by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/pointsxreb_nba.png" alt="Points vs Rebounds per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/pointsxreb_nba.png" alt="Points vs Rebounds per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between points per game and rebounds per game by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/pointsxassists_nba.png" alt="Points vs Assists per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/pointsxassists_nba.png" alt="Points vs Assists per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between points per game and assists per game by each team in the 2024-2025 NBA season</p>
   </div>
 
   <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/image/rebxassists_nba.png" alt="Rebounds vs Assists per game by NBA Team" style="width: 300px; height: auto; border-radius: 6px;">
+    <img src="{{ site.baseurl }}/image/rebxassists_nba.png" alt="Rebounds vs Assists per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
     <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between rebounds per game and assists per game by each team in the 2024-2025 NBA season</p>
   </div>
   
