@@ -12,7 +12,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 Note that the nba team name feature gets dropped before performing PCA, this was just to double check that my preprocessing was behaving as expected and a general overview of the full dataset that this script was working with.
 
-[PCA Script](https://github.com/maxjwhite/csci5612ML-NBACode) | [Link to Data](https://github.com/swar/nba_api)
+[PCA Script](https://github.com/maxjwhite/csci5612ML-NBACode) - [Link to Data](https://github.com/swar/nba_api)
 
 ---
 ## Visualizations
@@ -23,20 +23,23 @@ Note that the nba team name feature gets dropped before performing PCA, this was
 
 ---
 ## Results
-* How much information (what percentage ) remains in the 2D dataset. : **75.54%**
-![2d_pca](image/pca_2d_var.png)
 
-* How much information (what percentage ) remains in the 3D dataset. : **86.93%**
-![3d_pca](image/pca_3d_var.png)
+* How much information (what percentage ) remains in the 2D dataset. : **75.54%**  
+<img src="image/pca_2d_var.png" width="450">
+
+* How much information (what percentage ) remains in the 3D dataset. : **86.93%**  
+<img src="image/pca_3d_var.png" width="450">
 
 * How many dimensions do you need to have in your dataset (after using PCA) to retain at least 95% of the data. : **5 dimensions**
+
 <p style="text-align: justify;">
-In order to find this, we have to keep adding features in descending order of importance until we reach 95% of the variance retained. This requires some trial and error as well as first visualizing the importance of all of our principal components in order. 
+In order to find this, we have to keep adding features in descending order of importance until we reach 95% of the variance retained. This requires some trial and error as well as first visualizing the importance of all of our principal components in order.
 </p>
 
-![num_features](image/pca_num95.png)
+<img src="image/pca_num95.png" width="450">
 
-* What are the top three eigenvalues of your data?
-![num_features](image/pca_eigenvals.png)
+* What are the top three eigenvalues of your data?  
+<img src="image/pca_eigenvals.png" width="450">
+
 ---
 
