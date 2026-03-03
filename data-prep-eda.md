@@ -51,137 +51,74 @@ Most of the data prep and cleaning work was already done before the requests wer
 
 </div>
 
+---
+
+## Visuals / EDA
 
 <p style="text-align: justify;">
-The code below shows step by step how the data was requested and reformatted for EDA and visualization. This preliminary exploration focused on endpoints relating to individual player stats and team stats, but there are many other endpoints to explore that would follow a similar pipeline. 
+Below are some visuals that were created to get an idea of what the team stats endpoint data looks like along with some intial exploration of feature relationships
 </p>
 
+<div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
 
-{% highlight python %}
-# !pip install nba_api
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-from nba_api.stats.static import teams
-from nba_api.stats.endpoints import leaguedashteamstats
-import warnings
-warnings.filterwarnings('ignore')
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/wins_nba.png" alt="Wins by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The graph above shows win counts by each team in the 2024-2025 NBA season. This is an important feature as it is the primary metric for evaluating how a team is performing throughout the regular season.</p>
+  </div>
 
-plt.style.use('seaborn-v0_8')
-sns.set_palette("husl")
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/losses_nba.png" alt="Losses by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The graph above shows loss counts by each team in the 2024-2025 NBA season. Supplementing the 'Wins' chart above, this is just to help futher illustrate the losses feature.</p>
+  </div>
 
-# Function to get and save team data to CSV
-def get_and_save_team_data():
-    try:
-        team_stats = leaguedashteamstats.LeagueDashTeamStats(
-            season='2024-25', 
-            season_type_all_star='Regular Season',
-            per_mode_detailed='PerGame'
-        )
-        
-        df = team_stats.get_data_frames()[0]
-        
-        df.to_csv('nba_team_data.csv', index=False)
-        print("Data saved to 'nba_team_data.csv'")
-        
-        return df
-        
-    except Exception as e:
-        print(f"Error fetching data: {e}")
-        return None
-  {% endhighlight %}
-{% highlight python %}
-import os
-if not os.path.exists('nba_team_data.csv'):
-    print("Fetching data from API...")
-    team_data = get_and_save_team_data()
-    if team_data is None:
-        print("Failed to retrieve data. Exiting.")
-        exit()
-else:
-    print("Loading data from CSV...")
-    team_data = pd.read_csv('nba_team_data.csv')
-    print("Data loaded successfully")
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/winpct_nba.png" alt="Win % by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The graph above shows win percentage by each team in the 2024-2025 NBA season. A proportion measure that shows the win feature divided by the total games played.</p>
+  </div>
 
-print("\nAvailable columns:")
-print(team_data.columns.tolist())
-print("\nFirst few rows of data:")
-print(team_data.head())
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/points_nba.png" alt="Points per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The graph above shows points per game by each team in the 2024-2025 NBA season. A measure which averages the points per game which might highlight how effective a team's offense is. </p>
+  </div>
 
-clean_data = []
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/reb_nba.png" alt="Rebounds per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The graph above shows rebounds per game by each team in the 2024-2025 NBA season. A measure which averages the points allowed per game which might highlight how effective a team's defense is. </p>
+  </div>
 
-column_mapping = {
-    'TEAM_NAME': 'TEAM_NAME',
-    'GP': 'GP',
-    'W': 'W',
-    'L': 'L',
-    'W_PCT': 'W_PCT', 
-    'PTS': 'PTS',
-    'REB': 'REB',
-    'AST': 'AST',
-    'FG_PCT': 'FG_PCT',
-    'FT_PCT': 'FT_PCT',
-    'OPP_PTS': 'OPP_PTS'
-}
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/assists_nba.png" alt="Assists per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The graph above shows Assists per game by each team in the 2024-2025 NBA season</p>
+  </div>
 
-# Create abbreviation 
-team_abbreviations = {
-    'Atlanta Hawks': 'ATL',
-    'Boston Celtics': 'BOS',
-    'Brooklyn Nets': 'BKN',
-    'Charlotte Hornets': 'CHO',
-    'Chicago Bulls': 'CHI',
-    'Cleveland Cavaliers': 'CLE',
-    'Dallas Mavericks': 'DAL',
-    'Denver Nuggets': 'DEN',
-    'Detroit Pistons': 'DET',
-    'Golden State Warriors': 'GSW',
-    'Houston Rockets': 'HOU',
-    'Indiana Pacers': 'IND',
-    'Los Angeles Clippers': 'LAC',
-    'Los Angeles Lakers': 'LAL',
-    'Memphis Grizzlies': 'MEM',
-    'Miami Heat': 'MIA',
-    'Milwaukee Bucks': 'MIL',
-    'Minnesota Timberwolves': 'MIN',
-    'New Orleans Pelicans': 'NOP',
-    'New York Knicks': 'NYK',
-    'Oklahoma City Thunder': 'OKC',
-    'Orlando Magic': 'ORL',
-    'Philadelphia 76ers': 'PHI',
-    'Phoenix Suns': 'PHX',
-    'Portland Trail Blazers': 'POR',
-    'Sacramento Kings': 'SAC',
-    'San Antonio Spurs': 'SAS',
-    'Toronto Raptors': 'TOR',
-    'Utah Jazz': 'UTA',
-    'Washington Wizards': 'WAS'
-}
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/pointsxwinpct_nba.png" alt="Points vs Win % per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between points per game and win % by each team in the 2024-2025 NBA season</p>
+  </div>
 
-for _, row in team_data.iterrows():
-    team_name = row.get('TEAM_NAME', 'Unknown')
-    abbrev = team_abbreviations.get(team_name, team_name)
-    clean_row = {
-        'TEAM_NAME': team_name,
-        'TEAM_ABBREV': abbrev,
-        'GP': row.get('GP', 0),
-        'W': row.get('W', 0),
-        'L': row.get('L', 0),
-        'W_PCT': row.get('W_PCT', 0),  
-        'PTS': row.get('PTS', 0),
-        'REB': row.get('REB', 0),
-        'AST': row.get('AST', 0),
-        'FG_PCT': row.get('FG_PCT', 0),
-        'FT_PCT': row.get('FT_PCT', 0),
-        'OPP_PTS': row.get('OPP_PTS', 0)
-    }
-    clean_data.append(clean_row)
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/rebxwinpct_nba.png" alt="Rebounds vs Win % per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between rebounds per game and win % by each team in the 2024-2025 NBA season</p>
+  </div>
 
-clean_df = pd.DataFrame(clean_data)
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/assistsxwinpct_nba.png" alt="Assists vs Win % per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between assists per game and win % by each team in the 2024-2025 NBA season</p>
+  </div>
 
-clean_df['W_PCT'] = pd.to_numeric(clean_df['W_PCT'], errors='coerce')
-{% endhighlight %}
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/pointsxreb_nba.png" alt="Points vs Rebounds per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between points per game and rebounds per game by each team in the 2024-2025 NBA season</p>
+  </div>
 
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/pointsxassists_nba.png" alt="Points vs Assists per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between points per game and assists per game by each team in the 2024-2025 NBA season</p>
+  </div>
 
-
+  <div style="text-align: center;">
+    <img src="{{ site.baseurl }}/image/rebxassists_nba.png" alt="Rebounds vs Assists per game by NBA Team" style="width: 500px; height: auto; border-radius: 6px;">
+    <p style="font-size: 0.9em; color: #555;">The scatter plot above shows the relationship between rebounds per game and assists per game by each team in the 2024-2025 NBA season</p>
+  </div>
+  
+</div>
