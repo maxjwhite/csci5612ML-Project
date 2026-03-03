@@ -31,10 +31,10 @@ Note that the nba team name feature gets dropped before performing PCA, this was
 ## Results
 
 * How much information (what percentage ) remains in the 2D dataset. : **75.54%**  
-<img src="image/pca_2d_var.png" width="450">
+![2d](image/pca_2d_var.png)
 
 * How much information (what percentage ) remains in the 3D dataset. : **86.93%**  
-<img src="image/pca_3d_var.png" width="450">
+![2d](image/pca_3d_var.png)
 
 * How many dimensions do you need to have in your dataset (after using PCA) to retain at least 95% of the data. : **5 dimensions**
 
@@ -42,10 +42,10 @@ Note that the nba team name feature gets dropped before performing PCA, this was
 In order to find this, we have to keep adding features in descending order of importance until we reach 95% of the variance retained. This requires some trial and error as well as first visualizing the importance of all of our principal components in order.
 </p>
 
-<img src="csci5612ML-NBACode/image/pca_num95.png" width="450">
+![2d](image/pca_num95.png)
 
 * What are the top three eigenvalues of your data?  
-<img src="image/pca_eigenvals.png" width="450">
+![2d](image/pca_eigenvalsd.png)
 
 ---
 
