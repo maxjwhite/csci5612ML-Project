@@ -42,7 +42,7 @@ Note that the nba team name feature gets dropped before performing PCA, this was
 In order to find this, we have to keep adding features in descending order of importance until we reach 95% of the variance retained. This requires some trial and error as well as first visualizing the importance of all of our principal components in order.
 </p>
 
-<img src="image/pca_num95.png" width="450">
+<img src="csci5612ML-NBACode/image/pca_num95.png" width="450">
 
 * What are the top three eigenvalues of your data?  
 <img src="image/pca_eigenvals.png" width="450">
