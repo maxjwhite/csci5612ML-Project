@@ -24,11 +24,12 @@ Support is just the frequency at which an itemset or rule appears in the dataset
 ## Code
 <p align="center">
   <strong>
-    <a href="https://github.com/maxjwhite/csci5612ML-NBACode">PCA Script</a>
+    <a href="https://github.com/maxjwhite/csci5612ML-NBACode">ARM Script</a>
     <a href="https://github.com/swar/nba_api">Link to Data</a>
   </strong>
 </p>
 
+![arm_image](image/arm_data_clean.png)
 
 ---
 ## Results. Discuss, illustrate, describe, and visualize the results. 
