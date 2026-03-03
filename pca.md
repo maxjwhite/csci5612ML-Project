@@ -10,12 +10,15 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 ## Cleaned Data for PCA
 ![PCA Clean Data](image/pca_clean.png)
 
+<p style="text-align: justify;">
 Note that the nba team name feature gets dropped before performing PCA, this was just to double check that my preprocessing was behaving as expected and a general overview of the full dataset that this script was working with.
+</p>
 
 ![PCA after Data](image/pca_after.png)
 
+<p style="text-align: justify;">
 This is an image of the dataframe after we perfomed PCA. Notice how the number of features has reduced significantly and in this case, we are only examining the top 3 principal components. So, now that the data has been transformed, it'll be possible to plot this in 2 dimensional and 3 dimensional space, whereas before it was impossible to do so with all of the features. 
-
+</p>
 
 <p align="center">
   <strong>
@@ -32,6 +35,9 @@ This is an image of the dataframe after we perfomed PCA. Notice how the number o
 
 ![3d](image/pca_3d.png)
 
+<p style="text-align: justify;">
+The scatteplots above reveal to us clear patterns in terms of groupings based on win percentages, with higher win percentage teams clustering further along the positive axis of principal component 1. Following backwards along this same axis, the points tend to spread out along the axis of principal component 2, where clear clusters of lower percentage win teams present themsevles. 
+</p>
 ---
 ## Results
 
