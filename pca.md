@@ -45,7 +45,7 @@ In order to find this, we have to keep adding features in descending order of im
 ![2d](image/pca_num95.png)
 
 * What are the top three eigenvalues of your data?  
-![2d](image/pca_eigenvalsd.png)
+![2d](image/pca_eigenvals.png)
 
 ---
 
