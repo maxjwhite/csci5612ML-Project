@@ -8,9 +8,9 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 </p>
 
 ## Cleaned Data for PCA
-![PCA Clean Data](image/'imagefilenamehere')
+![PCA Clean Data](image/pca_clean.png)
 
-[Link to code in repo](https://github.com/maxjwhite/csci5612ML-NBACode)
+[PCA Script](https://github.com/maxjwhite/csci5612ML-NBACode) | [Link to Data](https://github.com/swar/nba_api)
 
 ---
 ## Visualizations
