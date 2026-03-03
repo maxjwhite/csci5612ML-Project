@@ -56,7 +56,7 @@ Most of the data prep and cleaning work was already done before the requests wer
 
 The complete implementation for this analysis can be found here in the scripts/eda folder:
 
-[GitHub Repository – NBA Analytics Project](hhttps://github.com/maxjwhite/csci5612ML-NBACode/tree/main)
+[GitHub Repository – NBA Analytics Project](https://github.com/maxjwhite/csci5612ML-NBACode)
 
 ---
 
