@@ -47,5 +47,9 @@ In order to find this, we have to keep adding features in descending order of im
 * What are the top three eigenvalues of your data?  
 ![2d](image/pca_eigenvals.png)
 
+<p style="text-align: justify;">
+PCA allows for a reduction in our dimensionality whilst still preserving a majority of the variance within the dataset. By compiling our features in to our primary 3 principal components, we are able to retain a majority of the shape and clustering of our dataset. These reductions help us identify where strong performing NBA teams cluster without having to consider every single possible statistic in our dataset. Notice how with only 3 principal components, we are still able to explain 86.93% of the varaiation within out dataset, which means we can draw fairly accurate inferences in terms of the clustering of these principal components. These methods in turn help identify important features for further clustering methods which will supplement our findings above.
+</p>
+
 ---
 
