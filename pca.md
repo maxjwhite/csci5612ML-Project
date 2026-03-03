@@ -10,14 +10,16 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 ## Cleaned Data for PCA
 ![PCA Clean Data](image/pca_clean.png)
 
+Note that the nba team name feature gets dropped before performing PCA, this was just to double check that my preprocessing was behaving as expected and a general overview of the full dataset that this script was working with.
+
 [PCA Script](https://github.com/maxjwhite/csci5612ML-NBACode) | [Link to Data](https://github.com/swar/nba_api)
 
 ---
 ## Visualizations
 
-![2d](image/'imagefilenamehere')
+![2d](image/pca_2d.png)
 
-![3d](image/'imagefilenamehere')
+![3d](image/pca_3d.png)
 
 ---
 ## Results
