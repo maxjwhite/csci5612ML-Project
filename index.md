@@ -3,7 +3,9 @@ layout: page
 title: Introduction
 permalink: /
 ---
-![Wide-angle view of a professional basketball game](https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80)
+<img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80"
+     alt="Wide-angle view of a professional basketball game"
+     style="float: right; width: 45%; margin: 0 0 20px 25px; border-radius: 10px;">
 <p style="text-align: justify;">
 The National Basketball Association (NBA) is one of the most popular and closely followed professional sports leagues in the world, attracting fans, analysts, media organizations, and team decision-makers alike. Beyond entertainment, the NBA has become a space where data plays an increasingly important role in shaping how the game is understood and discussed. Every season, thousands of games generate loads of data on player performance, team outcomes, and league-wide trends. This data helps frame conversations about success, improvement, and competitive balance across the league. For fans, data-driven insights provide deeper context for what happens on the court. For teams and players, performance statistics can influence evaluations, contracts, and career trajectories. As analytics becomes more visible in sports coverage, it is important to understand what stories the data can meaningfully tell. Basketball’s structured gameplay and consistent rules make it especially well-suited for systematic analysis. Examining NBA data allows us to explore broader questions about performance and consistency in a familiar setting. This project focuses on analyzing NBA data to better understand patterns that emerge across players, teams, and seasons.
 </p>
@@ -14,8 +16,11 @@ The data used in this project is gathered from publicly available NBA statistics
 
 <p style="text-align: justify;"> To accomplish this, the project will apply a combination of dimensionality reduction and pattern-discovery techniques, specifically principal component analysis (PCA), association rule mining (ARM), and multiple clustering methods including k-means, hierarchical clustering, and DBSCAN. PCA will first be used to reduce the dimensionality of the dataset by identifying a smaller set of components that capture the majority of variation across team performance metrics. This helps simplify interpretation while preserving the most important statistical structure in the data. Clustering methods will then group teams or seasons based on similarity in their statistical profiles. K-means will provide clearly defined partitions of teams into distinct groups, hierarchical clustering will allow us to examine nested relationships and similarities at different levels of granularity, and DBSCAN will help identify dense groupings while also detecting potential outliers that do not fit common team archetypes. Finally, association rule mining will be used to uncover combinations of performance characteristics that frequently occur together, particularly among high-performing or championship teams. By integrating PCA for structure, multiple clustering techniques for segmentation, and ARM for relationship discovery, this project aims to provide a comprehensive view of the statistical patterns that consistently align with elite performance in the NBA. 
 </p>
-![Finals logo](image/finals.png)
+<img src="image/finals.png"
+     alt="Finals logo"
+     style="float: left; width: 35%; margin: 10px 25px 20px 0; border-radius: 10px;">
 
+<div style="clear: both;"></div>
 ---
 
 ## Questions of Interest
