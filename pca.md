@@ -38,6 +38,7 @@ This is an image of the dataframe after we perfomed PCA. Notice how the number o
 <p style="text-align: justify;">
 The scatteplots above reveal to us clear patterns in terms of groupings based on win percentages, with higher win percentage teams clustering further along the positive axis of principal component 1. Following backwards along this same axis, the points tend to spread out along the axis of principal component 2, where clear clusters of lower percentage win teams present themsevles. 
 </p>
+
 ---
 ## Results
 
