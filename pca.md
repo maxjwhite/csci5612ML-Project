@@ -4,13 +4,18 @@ title: PCA
 permalink: /pca/
 ---
 <p style="text-align: justify;">
-Principal Component Analysis (PCA) is a dimensionality reduction technique that transforms a large set of possibly correlated variables into a smaller set of uncorrelated components that capture most of the variation in the data. Instead of analyzing dozens of overlapping team statistics—such as points per game, field goal percentage, pace, turnovers, and defensive rating—PCA identifies underlying directions (principal components) that summarize the dominant patterns across those metrics. In the context of our NBA dataset, PCA helps simplify complex team performance profiles into a few interpretable dimensions, such as overall offensive strength or defensive efficiency, while retaining the majority of the information contained in the original variables. This makes it easier to visualize team differences, reduce noise before clustering, and understand which combinations of statistics explain the largest variation between teams and seasons.
+Principal Component Analysis (PCA) is a dimensionality reduction technique that transforms a large set of possibly correlated variables into a smaller set of uncorrelated components that capture most of the variation in the data. Instead of analyzing dozens of overlapping team statistics—such as points per game, field goal percentage, pace, turnovers, and defensive rating, PCA identifies underlying directions (principal components) that summarize the dominant patterns across those metrics. In the context of our NBA dataset, PCA helps simplify complex team performance profiles into a few interpretable dimensions, such as overall offensive strength or defensive efficiency, while retaining the majority of the information contained in the original variables. This makes it easier to visualize team differences, reduce noise before clustering, and understand which combinations of statistics explain the largest variation between teams and seasons.
 </p>
 
 ## Cleaned Data for PCA
 ![PCA Clean Data](image/pca_clean.png)
 
 Note that the nba team name feature gets dropped before performing PCA, this was just to double check that my preprocessing was behaving as expected and a general overview of the full dataset that this script was working with.
+
+![PCA after Data](image/pca_after.png)
+
+This is an image of the dataframe after we perfomed PCA. Notice how the number of features has reduced significantly and in this case, we are only examining the top 3 principal components. So, now that the data has been transformed, it'll be possible to plot this in 2 dimensional and 3 dimensional space, whereas before it was impossible to do so with all of the features. 
+
 
 <p align="center">
   <strong>
