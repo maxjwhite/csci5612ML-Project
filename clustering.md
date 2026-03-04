@@ -24,7 +24,7 @@ Each method was evaluated using silhouette scores, cluster counts, and visual in
 
 ---
 ## Data Prep / Code
-![clust_before](image/pca_before.png)
+![clust_before](image/pca_clean.png)
 
 ![clust_after](image/pca_after.png)
 
