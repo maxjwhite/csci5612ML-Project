@@ -26,11 +26,11 @@ Each method was evaluated using silhouette scores, cluster counts, and visual in
 ## Data Prep / Code
 ![clust_before](image/pca_clean.png)
 
-![clust_after](image/pca_after.png)
-
 <p style="text-align: justify;">
 Utilizing the team data endpoint from the nba_api. We can isolate numeric features and create/isolate our label feature in order to perform clustering methods. Before continuing with the clustering however, PCA will be applied to the dataset in order to consolidate our features into 3D space in order to make visualization possible. Otherwise, we would have to consider how to plot OFF_RATING, DEF_RATING, NET_RATING, PACE, TS_PCT, EFG_PCT, ETC. 
 </p>
+
+![clust_after](image/pca_after.png)
 
 ![clust_after](image/clust_pca.png)
 
