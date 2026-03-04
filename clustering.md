@@ -24,15 +24,15 @@ Each method was evaluated using silhouette scores, cluster counts, and visual in
 
 ---
 ## Data Prep / Code
-![clust_before](pca_before.png)
+![clust_before](image/pca_before.png)
 
-![clust_after](pca_after.png)
+![clust_after](image/pca_after.png)
 
 <p style="text-align: justify;">
 Utilizing the team data endpoint from the nba_api. We can isolate numeric features and create/isolate our label feature in order to perform clustering methods. Before continuing with the clustering however, PCA will be applied to the dataset in order to consolidate our features into 3D space in order to make visualization possible. Otherwise, we would have to consider how to plot OFF_RATING, DEF_RATING, NET_RATING, PACE, TS_PCT, EFG_PCT, ETC. 
 </p>
 
-![clust_after](clust_pca.png)
+![clust_after](image/clust_pca.png)
 
 <p align="center">
   <strong>
@@ -44,17 +44,17 @@ Utilizing the team data endpoint from the nba_api. We can isolate numeric featur
 
 ---
 ## Results
-![clust_after](kmeans.png)
+![clust_after](image/kmeans.png)
 <p style="text-align: justify;">
 Based on our elbow plot and along with the silhoutte score, the desired number of groups (k) wasa determined to be 3. This was then used in our KMeans algorithm to cluster our nba team data into 3 distinct clusters. What this reveals are groupings of teams based on performance with higher performing, average performing, and under performing teams grouped with one another. 
 </p>
 
-![clust_after](dbscan.png)
+![clust_after](image/dbscan.png)
 <p style="text-align: justify;">
   DBSCAN shows some more ambiguous cluster types whilst also identifying 'noise' or points which don't belong to any cluster whatsoever. In this case, it more clearly groups average and higher performing teams together, whilst isolating lower performing teams in a separate group. We can validate this by looking back at our PCA plot with our clustering labels. 
 </p>
 
-![clust_after](dendro.png)
+![clust_after](image/dendro.png)
 <p style="text-align: justify;">
   The dendrogram shows more intimate connections between individual teams whilst also showing how those connections are a part of a larger grouping of teams. BAsed on the pairings, these findings seem to support the cluster types that were identified using DBSCAN. 
 </p>
