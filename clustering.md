@@ -5,7 +5,7 @@ permalink: /clustering/
 ---
 
 ## Overview
-<img src="image/clustimg.png"
+<img src="{{ site.baseurl }}/ image/clustimg.png"
      alt="Wide-angle view of a professional basketball game"
      style="float: right; width: 45%; margin: 0 0 20px 25px; border-radius: 10px;">
 <p style="text-align: justify;">
@@ -15,7 +15,7 @@ We performed unsupervised clustering on NBA team performance data across five se
 * Hierarchical clustering (agglomerative, Ward linkage)
 * DBSCAN (density-based)
 
-<img src="image/dist.png"
+<img src="{{ site.baseurl }}/image/dist.png"
      alt="Wide-angle view of a professional basketball game"
      style="float: right; width: 45%; margin: 0 0 20px 25px; border-radius: 10px;">
 <p style="text-align: justify;">
