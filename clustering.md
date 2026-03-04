@@ -5,7 +5,7 @@ permalink: /clustering/
 ---
 
 ## Overview
-<img src="clustimg.png"
+<img src="image/clustimg.png"
      alt="Wide-angle view of a professional basketball game"
      style="float: right; width: 45%; margin: 0 0 20px 25px; border-radius: 10px;">
 <p style="text-align: justify;">
