@@ -21,6 +21,9 @@ The data used in this project is gathered from publicly available NBA statistics
 </p>
 
 <div style="clear: both;"></div>
+
+<p style="text-align: justify;"> From a basketball perspective, this project highlights how teams tend to group together based on overall style and effectiveness of play rather than any single statistic. Strong teams consistently show a balance of efficient offense, solid defense, and good decision-making, which naturally places them in similar clusters. On the other hand, lower-performing teams often share struggles across multiple areas, leading them to group together as well. This reinforces the idea that success in the NBA is not driven by one factor alone, but by a combination of strengths that work together over the course of a season. Given that there are multiple different contributing factors to consider as it relates to win prediction, it is appropriate to explore and use multiple different model types. This ensures that we are casting a broad net accross our data and exploring as many aspects of it as possible. 
+</p>
 ---
 
 ## Questions of Interest
