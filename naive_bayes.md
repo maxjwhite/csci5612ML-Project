@@ -14,8 +14,17 @@ In the case of this project where a majority of the data is continuous, it would
 
 ---
 ## Data Prep
+<p style="text-align: justify;">
+All supervised learning models require properly labeled and formatted data. In this project, NBA team statistics were collected and used to create a classification target, WIN_TIER, by grouping teams into Low, Mid, and High categories based on win percentage. The feature set includes advanced metrics such as offensive rating, defensive rating, pace, and shooting efficiency. To evaluate model performance, the dataset was split into a training set (used to build the model) and a testing set (used to evaluate performance on unseen data). These sets must be disjoint to avoid data leakage, ensuring that model accuracy reflects true generalization rather than memorization.
+</p>
 
-All models and methods require specific data formats. Supervised modeling requires first that you have labeled data. Next, it requires that you split your data into a Training Set (to train/build) the model, and a Testing Set to test the accuracy of your model.  Prepare data for Naïve Bayes analyses. You must code and run multinomial Naive Bayes. In addition, choose any two other different Naive Bayes flavors (such as Bernoullli, categorical, etc.)   (LINK to data you prepare) Include screen images of the dataframes you plan to use. Remember, you may have different dataframe data types depending on the flavor of NB you choose. Be clear and transparent.  Also include information and a small image of the Training Set and Testing sets and why they are (and must be) disjoint.
+<p style="text-align: justify;">
+Different Naïve Bayes variants require different data formats, so multiple preprocessing steps were applied. Multinomial Naïve Bayes requires non-negative inputs, so features were scaled using MinMaxScaler. Gaussian Naïve Bayes assumes continuous, normally distributed data and was applied directly to the original features. Bernoulli Naïve Bayes requires binary inputs, so features were converted using binarization. As a result, each model uses a slightly different version of the dataset.
+</p>
+
+![mult_nb](image/before_nba.png)
+
+![mult_nb](image/nb_after.png)
 
 ---
 ## Code
@@ -29,8 +38,27 @@ All models and methods require specific data formats. Supervised modeling requir
 
 ---
 ## Results
-Creatively and clearly discuss, compare, illustrate, describe, and visualize the results. Include confusion matrices and the accuracies. 
+![mult_nb](image/mult_nb.png)
+
+![score_mult](image/score_mult.png)
+
+
+![guass_nb](image/guass_nb.png)
+
+![score_guass](image/score_guass.png)
+
+
+![bin_nb](image/bin_nb.png)
+
+![score_bin](image/score_bin.png)
+
+<p style="text-align: justify;">
+Based on the results above, it is apparent that Guassian Naive Bayes performed the best out of the three and this was to be expected given that this model is best suited for contiunous data, which makes up the maority of the NBA stat data.
+</p>
+
 
 ---
 ## Conclusions
-What did you learn (and/or what can you predict here) that pertains to your topic?
+<p style="text-align: justify;">
+Across the Naïve Bayes models, we were able to classify teams into Low, Mid, and High win tiers with measurable accuracy, demonstrating that even relatively simple probabilistic models can capture meaningful patterns in NBA data. Comparing different Naïve Bayes variants highlighted how data representation impacts model performance. Gaussian NB performed the best with continuous features, while Multinomial and Bernoulli required transformations that sometimes reduced overall performance. This suggests that the underlying distribution of basketball statistics is better suited to continuous assumptions rather than discrete or binary ones.
+</p>
