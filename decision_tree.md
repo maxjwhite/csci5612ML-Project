@@ -21,7 +21,13 @@ In order to make the best splits in the data, DTs use purity scores such as Gini
 
 ---
 ## Data Prep
-(b) Data Prep. Prepare data for use with decision tree modeling. LINK to the sample of data. Also include information and a small image of the Training Set and Testing set and explain how you created them and why they are (and must be) disjoint. It is fine to use (and link to) the same data that you used from multinomial Naive Bayes above. 
+<p style="text-align: justify;">
+In order to prepare the NBA team data for the decision tree model, we followed a similar process to how we prepared our Naive Bayes model. Advanced team statistics we selected as features, including OFF_RATING, DEF_RATING, NET_RATING, PACE, TS_PCT, EFG_PCT, AST_RATIO, REB_PCT, TM_TOV_PCT, and PIE. The target variable, WIN_TIER, categorizes teams into Low, Mid, or High winning tiers based on quantiles of their winning percentage (W_PCT). After cleaning the data and removing missing values, we prepared the features (X) and target (y) for modeling. The data was then split into train test splits  at a 80/20 split, and we also ensured this was done using a stratified sample in order to get a sample of nba teams across several years, otherwise one nba season might only exist in our train or test split which could skew accuracy scores. It's important that these are disjoint in order to ensure that we aren't validating our model based on data the model has already seen, this would cause accuracy score to inflate and potential overfitting. 
+</p>
+
+![mult_nb](image/before_nba.png)
+
+![mult_nb](image/nb_after.png)
 
 ---
 ## Code
@@ -35,8 +41,19 @@ In order to make the best splits in the data, DTs use purity scores such as Gini
 
 ---
 ## Results
-(d) Results. Discuss, illustrate, describe, and visualize the results. Include the confusion matrix and the accuracy. Create and include at least three different trees with difference root nodes (you think about how to do this) and other difference (up to you). 
+![mult_nb](image/dt3.png)
+
+![mult_nb](image/dt5.png)
+
+![mult_nb](image/dtsqrt.png)
+
+![mult_nb](image/dtfull.png)
+
+![mult_nb](image/dtfull_pic.png)
+![mult_nb](image/dt_score.png)
 
 ---
 # Conclusions
-(e) Conclusions. What did you learn (and/or what can you predict here) that pertains to your topic?
+<p style="text-align: justify;">
+The full decision tree achieved an overall accuracy of 86% on the test set, with strong precision and recall across all tiers (Low 0.90/0.82, Mid 0.79/0.85, High 0.92/0.92). Most misclassifications occurred between adjacent tiers, such as Mid and High, which aligns with expectations since teams near the cutoff are harder to categorize. These results suggest that decision trees can reliably predict team winning tiers from advanced statistics and identify the features most closely associated with team success. This approach provides a foundation for further exploration, including expanding the dataset to more seasons, incorporating additional performance metrics, or comparing tree-based methods with other classifiers such as Naïve Bayes or ensemble models.
+</p>
