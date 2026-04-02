@@ -65,7 +65,7 @@ The logistic regression model achieved strong performance in predicting NBA team
     
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
-{% highlight python %}
+{% endhighlight %}
 
 <p style="text-align: justify;">
 The importance of the train test split comes from its ability to verify the efficacy of the model. This technique which typically splits data into a 80% train and 20% test split allows the model to verify it's perfomance and in this case checks how effective the logistic regression classification is performing.
