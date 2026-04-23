@@ -3,7 +3,7 @@ layout: page
 title: Conclusion
 permalink: /conclusion/
 ---
-<img src="image/bulls.png"
+<img src="{{ site.baseurl }}/image/bulls.png"
      alt="Finals logo"
      style="float: left; width: 35%; margin: 10px 25px 20px 0; border-radius: 10px;">
 <p style="text-align: justify;">
@@ -18,7 +18,7 @@ One of the clearest findings came from dimensionality reduction, a technique tha
 Teams also naturally fall into clear performance groups. Clustering methods, which find structure in data without being told what to look for, independently and consistently identified three tiers: a small group of elite teams, a large competitive middle, and a struggling bottom tier. These groupings were not forced by the analysis; they emerged on their own across multiple different algorithms, which strengthens confidence that they reflect something real about how the league is structured.
 </p>
 
-<img src="image/playoff.png"
+<img src="{{ site.baseurl }}/image/playoff.png"
      alt="Finals logo"
      style="float: left; width: 35%; margin: 10px 25px 20px 0; border-radius: 10px;">
 <p style="text-align: justify;">
